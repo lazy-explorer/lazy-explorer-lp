@@ -1,0 +1,47 @@
+@import 'variables';
+@import '~grommet/scss/grommet-core/index';
+@import '~grommet/scss/hpe/_objects.button-hpe';
+@import '~grommet/scss/hpe/_objects.anchor-hpe';
+
+.header {
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	padding: 0 1em;
+}
+
+.hero {
+	min-height: 500px;
+	.grommetux-hero__background {
+		filter: brightness(0.9);
+	}
+}
+
+.hero-card {
+}
+
+.nav-item {
+	font-weight: bold;
+}
+
+.skrim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(200, 200, 200, 0.5);
+	z-index: -1;
+}
+
+.feature-section {
+	height: 50vw;
+}
+
+input.grommetux-text-input.email-input {
+	width: 100%;
+	border: 1px solid #fff;
+	font-size: 1.5rem;
+}
