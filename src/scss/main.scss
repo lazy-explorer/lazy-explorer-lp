@@ -15,11 +15,13 @@
 .hero {
 	min-height: 500px;
 	.grommetux-hero__background {
-		filter: brightness(0.9);
+		filter: brightness(0.8);
 	}
 }
 
 .hero-card {
+	flex-basis: auto;
+	width: 100%;
 }
 
 .nav-item {
@@ -32,7 +34,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(200, 200, 200, 0.5);
+	background-color: rgba(200, 200, 200, 0.55);
 	z-index: -1;
 }
 
@@ -44,4 +46,22 @@ input.grommetux-text-input.email-input {
 	width: 100%;
 	border: 1px solid #fff;
 	font-size: 1.5rem;
+}
+
+.mission-section {
+	position: relative;
+	padding: 3em 0;
+	#about-us {
+		z-index: 2;
+	}
+}
+
+.world-map {
+	position: absolute;
+	z-index: 0;
+	opacity: 0.3;
+}
+
+h1.hero-headline {
+	font-size: 6vw;
 }

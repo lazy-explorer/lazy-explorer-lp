@@ -54,17 +54,58 @@ export default class Home extends Component {
 					>
 						<Card
 							heading={
-								<Heading strong={true}>
+								<Heading className="hero-headline" strong={true}>
 									See the world, from the comfort of your own home
 								</Heading>
 							}
 							size="large"
 							className="hero-card"
+							align="center"
 						/>
 					</Hero>
 				</Box>
 
-				<Box align="center">
+				<Box className="mission-section" align="center">
+					<Box
+						className="world-map"
+						align="center"
+						pad={{ horizontal: 'large' }}
+					>
+						<WorldMap
+							series={[
+								{
+									continent: 'NorthAmerica',
+									label: 'North America',
+									colorIndex: 'graph-1'
+								},
+								{
+									continent: 'SouthAmerica',
+									label: 'South America',
+									colorIndex: 'accent-2'
+								},
+								{
+									continent: 'Europe',
+									label: 'Europe',
+									colorIndex: 'unset'
+								},
+								{
+									continent: 'Africa',
+									label: 'Africa',
+									colorIndex: 'graph-2'
+								},
+								{
+									continent: 'Asia',
+									label: 'Asia',
+									colorIndex: 'graph-3'
+								},
+								{
+									continent: 'Australia',
+									label: 'Australia',
+									colorIndex: 'graph-4'
+								}
+							]}
+						/>
+					</Box>
 					<Box
 						pad="large"
 						align="center"
@@ -76,12 +117,12 @@ export default class Home extends Component {
 							We want to make the world accessible to everyone
 						</Heading>
 						<Paragraph size="xlarge" width="large">
-							Our mission is to help create a...
+							Our mission is to help create a lorem ipsum lorem ipsum lorem
+							lorem ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem
+							ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem ipsum lorem
+							ipsum
 						</Paragraph>
 					</Box>
-				</Box>
-				<Box align="center">
-					<WorldMap />
 				</Box>
 				<Box colorIndex="light-1">
 					<Box
@@ -170,7 +211,6 @@ export default class Home extends Component {
 										name="item-1"
 										className="email-input"
 										placeHolder="Email Address"
-										colorIndex="dark"
 									/>
 								</FormFields>
 								<Footer pad={{ vertical: 'medium' }}>
