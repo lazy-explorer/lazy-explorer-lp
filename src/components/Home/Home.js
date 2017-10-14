@@ -7,6 +7,7 @@ import Heading from 'grommet/components/Heading';
 import Hero from 'grommet/components/Hero';
 import Paragraph from 'grommet/components/Paragraph';
 import Header from 'grommet/components/Header';
+import Headline from 'grommet/components/Headline';
 import Title from 'grommet/components/Title';
 import Form from 'grommet/components/Form';
 import FormFields from 'grommet/components/FormFields';
@@ -47,21 +48,13 @@ export default class Home extends Component {
 				</Header>
 				<Box>
 					<Hero
-						size="large"
+						size="small"
 						backgroundImage="/static/hero_image.jpg"
-						colorIndex="dark"
 						className="hero"
 					>
-						<Card
-							heading={
-								<Heading className="hero-headline" strong={true}>
-									See the world, from the comfort of your own home
-								</Heading>
-							}
-							size="large"
-							className="hero-card"
-							align="center"
-						/>
+						<Headline className="hero-headline" strong>
+							Explore Anywhere, From Anywhere.
+						</Headline>
 					</Hero>
 				</Box>
 
@@ -75,33 +68,27 @@ export default class Home extends Component {
 							series={[
 								{
 									continent: 'NorthAmerica',
-									label: 'North America',
-									colorIndex: 'graph-1'
+									label: 'North America'
 								},
 								{
 									continent: 'SouthAmerica',
-									label: 'South America',
-									colorIndex: 'accent-2'
+									label: 'South America'
 								},
 								{
 									continent: 'Europe',
-									label: 'Europe',
-									colorIndex: 'unset'
+									label: 'Europe'
 								},
 								{
 									continent: 'Africa',
-									label: 'Africa',
-									colorIndex: 'graph-2'
+									label: 'Africa'
 								},
 								{
 									continent: 'Asia',
-									label: 'Asia',
-									colorIndex: 'graph-3'
+									label: 'Asia'
 								},
 								{
 									continent: 'Australia',
-									label: 'Australia',
-									colorIndex: 'graph-4'
+									label: 'Australia'
 								}
 							]}
 						/>
@@ -116,15 +103,15 @@ export default class Home extends Component {
 						<Heading tag="h1" strong={true} margin="none">
 							We want to make the world accessible to everyone
 						</Heading>
-						<Paragraph size="xlarge" width="large">
-							Our mission is to help create a lorem ipsum lorem ipsum lorem
-							lorem ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem
-							ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem ipsum lorem
-							ipsum
+						<Paragraph className="mission-sub" size="xlarge" width="large">
+							Ever thought you would like to see some remote corner of the world
+							or a rare species or live event as it happens? Well, at lazy
+							explorer we aim to provide a hub for people to connect and share
+							with you via their smart phone.
 						</Paragraph>
 					</Box>
 				</Box>
-				<Box colorIndex="light-1">
+				<Box id="features" colorIndex="light-1">
 					<Box
 						direction="row"
 						flex="grow"
@@ -174,9 +161,9 @@ export default class Home extends Component {
 						</Box>
 					</Box>
 				</Box>
-				<Footer full="horizontal">
+				<Footer className="footer" full="horizontal">
 					<Box
-						colorIndex="neutral-1"
+						colorIndex="accent-1"
 						pad="large"
 						align="center"
 						full="horizontal"
@@ -186,7 +173,7 @@ export default class Home extends Component {
 							align="center"
 							textAlign="center"
 							size={{ width: { max: 'xxlarge' } }}
-							id="about-us"
+							colorIndex="dark"
 						>
 							<Heading tag="h1" strong={true} margin="none">
 								Learn More
@@ -204,19 +191,66 @@ export default class Home extends Component {
 							id="learn"
 							align="center"
 						>
-							<Form onSubmit={e => this.onEmailSubmit(e)}>
-								<FormFields>
-									<TextInput
-										id="item1"
-										name="item-1"
-										className="email-input"
-										placeHolder="Email Address"
-									/>
-								</FormFields>
-								<Footer pad={{ vertical: 'medium' }}>
-									<Button label="Submit" type="submit" primary={true} />
-								</Footer>
-							</Form>
+							<div id="mc_embed_signup">
+								<Form
+									action="https://lazyexplorer.us17.list-manage.com/subscribe/post?u=8e88b86bb61a89a1dadf76280&amp;id=0545bd7455"
+									method="post"
+									id="mc-embedded-subscribe-form"
+									name="mc-embedded-subscribe-form"
+									class="validate"
+									target="_blank"
+									novalidate
+								>
+									<div id="mc_embed_signup_scroll">
+										<FormFields>
+											<div class="mc-field-group">
+												<TextInput
+													className="email-input"
+													type="email"
+													name="EMAIL"
+													class="required email"
+													id="mce-EMAIL"
+													placeHolder="Email Address"
+												/>
+											</div>
+											<div id="mce-responses" class="clear">
+												<div
+													class="response"
+													id="mce-error-response"
+													style={{ display: 'none' }}
+												/>
+												<div
+													class="response"
+													id="mce-success-response"
+													style={{ display: 'none' }}
+												/>
+											</div>
+											<div
+												style={{ position: 'absolute', left: '-5000px' }}
+												aria-hidden="true"
+											>
+												<input
+													type="text"
+													name="b_8e88b86bb61a89a1dadf76280_0545bd7455"
+													tabindex="-1"
+													value=""
+												/>
+											</div>
+										</FormFields>
+										<Footer pad={{ vertical: 'medium' }}>
+											<Button
+												type="submit"
+												label="Submit"
+												primary
+												value="Subscribe"
+												name="subscribe"
+												id="mc-embedded-subscribe"
+												class="button"
+											/>
+										</Footer>
+									</div>
+								</Form>
+							</div>
 						</Box>
 					</Box>
 				</Footer>
