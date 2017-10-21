@@ -18,22 +18,13 @@ import WorldMap from 'grommet/components/WorldMap';
 import Image from 'grommet/components/Image';
 
 export default class Home extends Component {
-	onEmailSubmit(e) {
-		e.preventDefault();
-		console.log(e.target);
-	}
 	render() {
 		return (
 			<Box>
 				<Header className="header" colorIndex="dark">
 					<Title>Lazy Explorer</Title>
-					<Box flex={true} justify="end" direction="row" responsive={false}>
-						<Menu
-							responsive={true}
-							inline={true}
-							primary={false}
-							direction="row"
-						>
+					<Box flex justify="end" direction="row" responsive={false}>
+						<Menu responsive inline primary={false} direction="row">
 							<Anchor href="#about-us" className="nav-item active">
 								About Us
 							</Anchor>
@@ -100,14 +91,19 @@ export default class Home extends Component {
 						size={{ width: { max: 'xxlarge' } }}
 						id="about-us"
 					>
-						<Heading tag="h1" strong={true} margin="none">
+						<Heading tag="h1" strong margin="none">
 							We want to make the world accessible to everyone
 						</Heading>
-						<Paragraph className="mission-sub" size="xlarge" width="large">
+						<Paragraph
+							className="mission-sub"
+							size="large"
+							width="large"
+							strong
+						>
 							Ever thought you would like to see some remote corner of the world
-							or a rare species or live event as it happens? Well, at lazy
-							explorer we aim to provide a hub for people to connect and share
-							with you via their smart phone.
+							or a rare species or live event as it happens? Now you can. Lazy
+							Explorer provides a hub for people to connect and share with you
+							via their smart phone.
 						</Paragraph>
 					</Box>
 				</Box>
@@ -119,13 +115,17 @@ export default class Home extends Component {
 						pad={{ horizontal: 'large' }}
 					>
 						<Card
-							heading={<Heading strong={true}>Get Connected</Heading>}
-							description="Lorem Ipsum..."
+							heading={<Heading strong>Get Connected</Heading>}
+							description="Easily enter any live tour happening around the world or replay a past tour whenever you want."
 							size="small"
 							basis="1/2"
 						/>
 						<Box basis="1/2">
-							<Image fit="cover" src={'/static/feature-1.jpg'} />
+							<Image
+								className="feature-image"
+								fit="cover"
+								src="/static/feature-1.jpg"
+							/>
 						</Box>
 					</Box>
 					<Box
@@ -135,11 +135,15 @@ export default class Home extends Component {
 						pad={{ horizontal: 'large' }}
 					>
 						<Box basis="1/2">
-							<Image fit="cover" src={'/static/feature-1.jpg'} />
+							<Image
+								className="feature-image"
+								fit="cover"
+								src="/static/feature-2.jpg"
+							/>
 						</Box>
 						<Card
-							heading={<Heading strong={true}>Get Connected</Heading>}
-							description="Lorem Ipsum..."
+							heading={<Heading strong>Learn</Heading>}
+							description="Let our certified guides take you along on a one of a kind journey."
 							size="small"
 							basis="1/2"
 						/>
@@ -151,13 +155,17 @@ export default class Home extends Component {
 						pad={{ horizontal: 'large' }}
 					>
 						<Card
-							heading={<Heading strong={true}>Get Connected</Heading>}
-							description="Lorem Ipsum..."
+							heading={<Heading strong>Teach</Heading>}
+							description="Earn money by becoming a certified Lazy explorer guide and share a unique aspect of your culture or location with people all over the globe."
 							size="small"
 							basis="1/2"
 						/>
 						<Box basis="1/2">
-							<Image fit="cover" src={'/static/feature-1.jpg'} />
+							<Image
+								className="feature-image"
+								fit="cover"
+								src="/static/feature-3.jpg"
+							/>
 						</Box>
 					</Box>
 				</Box>
@@ -175,10 +183,10 @@ export default class Home extends Component {
 							size={{ width: { max: 'xxlarge' } }}
 							colorIndex="dark"
 						>
-							<Heading tag="h1" strong={true} margin="none">
+							<Heading tag="h1" strong margin="none">
 								Learn More
 							</Heading>
-							<Paragraph size="xlarge" width="large">
+							<Paragraph size="large" width="large">
 								Sign up to recieve updates and be the first to know when you can
 								start exploring!
 							</Paragraph>
@@ -191,66 +199,64 @@ export default class Home extends Component {
 							id="learn"
 							align="center"
 						>
-							<div id="mc_embed_signup">
-								<Form
-									action="https://lazyexplorer.us17.list-manage.com/subscribe/post?u=8e88b86bb61a89a1dadf76280&amp;id=0545bd7455"
-									method="post"
-									id="mc-embedded-subscribe-form"
-									name="mc-embedded-subscribe-form"
-									class="validate"
-									target="_blank"
-									novalidate
-								>
-									<div id="mc_embed_signup_scroll">
-										<FormFields>
-											<div class="mc-field-group">
-												<TextInput
-													className="email-input"
-													type="email"
-													name="EMAIL"
-													class="required email"
-													id="mce-EMAIL"
-													placeHolder="Email Address"
-												/>
-											</div>
-											<div id="mce-responses" class="clear">
-												<div
-													class="response"
-													id="mce-error-response"
-													style={{ display: 'none' }}
-												/>
-												<div
-													class="response"
-													id="mce-success-response"
-													style={{ display: 'none' }}
-												/>
-											</div>
-											<div
-												style={{ position: 'absolute', left: '-5000px' }}
-												aria-hidden="true"
-											>
-												<input
-													type="text"
-													name="b_8e88b86bb61a89a1dadf76280_0545bd7455"
-													tabindex="-1"
-													value=""
-												/>
-											</div>
-										</FormFields>
-										<Footer pad={{ vertical: 'medium' }}>
-											<Button
-												type="submit"
-												label="Submit"
-												primary
-												value="Subscribe"
-												name="subscribe"
-												id="mc-embedded-subscribe"
-												class="button"
+							<Form
+								action="https://lazyexplorer.us17.list-manage.com/subscribe/post?u=8e88b86bb61a89a1dadf76280&amp;id=0545bd7455"
+								method="post"
+								id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form"
+								className="validate signup-form"
+								target="_blank"
+								novalidate
+							>
+								<div id="mc_embed_signup_scroll">
+									<FormFields>
+										<div className="mc-field-group">
+											<TextInput
+												className="email-input"
+												type="email"
+												name="EMAIL"
+												class="required email"
+												id="mce-EMAIL"
+												placeHolder="Email Address"
 											/>
-										</Footer>
-									</div>
-								</Form>
-							</div>
+										</div>
+										<div id="mce-responses" className="clear">
+											<div
+												className="response"
+												id="mce-error-response"
+												style={{ display: 'none' }}
+											/>
+											<div
+												className="response"
+												id="mce-success-response"
+												style={{ display: 'none' }}
+											/>
+										</div>
+										<div
+											style={{ position: 'absolute', left: '-5000px' }}
+											aria-hidden="true"
+										>
+											<input
+												type="text"
+												name="b_8e88b86bb61a89a1dadf76280_0545bd7455"
+												tabIndex="-1"
+												value=""
+											/>
+										</div>
+									</FormFields>
+									<Footer pad={{ vertical: 'medium' }}>
+										<Button
+											type="submit"
+											label="Submit"
+											primary
+											value="Subscribe"
+											name="subscribe"
+											id="mc-embedded-subscribe"
+											class="button"
+										/>
+									</Footer>
+								</div>
+							</Form>
 						</Box>
 					</Box>
 				</Footer>

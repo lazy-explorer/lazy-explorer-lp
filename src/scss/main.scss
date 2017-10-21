@@ -34,6 +34,15 @@
 
 .mission-sub {
 	color: #182026;
+	line-height: 1.25;
+	background-color: rgba(#fff, 0.6);
+	margin: 1em;
+}
+
+.signup-form {
+	width: 100% !important;
+	max-width: 480px;
+	margin: auto;
 }
 
 .skrim {
@@ -47,7 +56,15 @@
 }
 
 .feature-section {
-	height: 50vw;
+	&:nth-of-type(2) {
+		flex-direction: column-reverse;
+	}
+
+	@media (min-width: 720px) {
+		&:nth-of-type(2) {
+			flex-direction: row;
+		}
+	}
 }
 
 input.grommetux-text-input.email-input {
@@ -60,7 +77,8 @@ input.grommetux-text-input.email-input {
 
 .mission-section {
 	position: relative;
-	padding: 3em 0;
+	padding-top: 4em;
+	padding-bottom: 5em;
 	#about-us {
 		z-index: 2;
 	}
@@ -75,6 +93,9 @@ input.grommetux-text-input.email-input {
 .footer {
 	margin-top: 2em;
 }
+.footer-cards-container {
+	width: 100%;
+}
 
 .hero-headline {
 	background-color: rgba($brand-color, 0.5);
@@ -83,4 +104,9 @@ input.grommetux-text-input.email-input {
 
 #about-us {
 	background-color: rgba(#fff, 0.5);
+}
+
+.feature-image {
+	height: 40vh;
+	min-height: 400px;
 }
