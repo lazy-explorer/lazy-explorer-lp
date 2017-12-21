@@ -40,7 +40,8 @@ export default class Home extends Component {
 				<Box>
 					<Hero
 						size="small"
-						backgroundImage="/static/hero_image.jpg"
+						background={<Image src="/static/hero_image.jpg" fit="cover" />}
+						full="true"
 						className="hero"
 					>
 						<Headline className="hero-headline" strong>
@@ -98,7 +99,6 @@ export default class Home extends Component {
 							className="mission-sub"
 							size="large"
 							width="large"
-							strong
 						>
 							Ever thought you would like to see some remote corner of the world
 							or a rare species or live event as it happens? Now you can. Lazy
@@ -124,7 +124,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature-1.jpg"
+								src="/static/feature_1.jpg"
 							/>
 						</Box>
 					</Box>
@@ -138,7 +138,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature-2.jpg"
+								src="/static/feature_2.jpg"
 							/>
 						</Box>
 						<Card
@@ -164,7 +164,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature-3.jpg"
+								src="/static/feature_3.jpg"
 							/>
 						</Box>
 					</Box>
@@ -206,7 +206,7 @@ export default class Home extends Component {
 								name="mc-embedded-subscribe-form"
 								className="validate signup-form"
 								target="_blank"
-								novalidate
+								noValidate
 							>
 								<div id="mc_embed_signup_scroll">
 									<FormFields>
@@ -215,7 +215,7 @@ export default class Home extends Component {
 												className="email-input"
 												type="email"
 												name="EMAIL"
-												class="required email"
+												className="required email"
 												id="mce-EMAIL"
 												placeHolder="Email Address"
 											/>
@@ -252,7 +252,6 @@ export default class Home extends Component {
 											value="Subscribe"
 											name="subscribe"
 											id="mc-embedded-subscribe"
-											class="button"
 										/>
 									</Footer>
 								</div>
