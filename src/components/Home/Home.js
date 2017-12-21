@@ -16,6 +16,10 @@ import TextInput from 'grommet/components/TextInput';
 import Menu from 'grommet/components/Menu';
 import WorldMap from 'grommet/components/WorldMap';
 import Image from 'grommet/components/Image';
+import HeroImage from './hero_image.jpg';
+import Feature1 from './feature_1.jpg';
+import Feature2 from './feature_2.jpg';
+import Feature3 from './feature_3.jpg';
 
 export default class Home extends Component {
 	render() {
@@ -40,7 +44,7 @@ export default class Home extends Component {
 				<Box>
 					<Hero
 						size="small"
-						background={<Image src="/static/hero_image.jpg" fit="cover" />}
+						background={<Image src={HeroImage} fit="cover" />}
 						full="true"
 						className="hero"
 					>
@@ -124,7 +128,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature_1.jpg"
+								src={Feature1}
 							/>
 						</Box>
 					</Box>
@@ -138,7 +142,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature_2.jpg"
+								src={Feature2}
 							/>
 						</Box>
 						<Card
@@ -164,7 +168,7 @@ export default class Home extends Component {
 							<Image
 								className="feature-image"
 								fit="cover"
-								src="/static/feature_3.jpg"
+								src={Feature3}
 							/>
 						</Box>
 					</Box>
