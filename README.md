@@ -1,14 +1,15 @@
-# gatsby-starter-grommet
-Gatsby starter configured to use the [Grommet design system](https://grommet.github.io/).
+# Lazy Explorer Landing Page
 
-Use this starter by running:
+### AWS Account
 
-```sh
-gatsby new my-grommet-site https://github.com/alampros/gatsby-starter-grommet
-```
+- Account Name: `lazyexplorer`
 
-See the [Gatsby starters docs](https://www.gatsbyjs.org/docs/gatsby-starters/) for more info on starters.
+- Landin page is hosted on [S3](https://s3.console.aws.amazon.com/s3/home)
+  - Bucket Name: `lazyexplorer.com`
+  
+### Analytics
 
-### Demo
-
-See the [live demo](https://alampros.github.io/gatsby-starter-grommet/)
+- Analytics provided by [Google Analytics](https://analytics.google.com)
+- Account: `Lazy Explorer`
+- Property: `Lazy Explorer Landing Page`
+- Tracking ID: `UA-111504724-1`
